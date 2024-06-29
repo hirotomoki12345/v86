@@ -212,3 +212,23 @@ Shoot me an email to `copy@copy.sh`. Please report bugs on GitHub.
 ## Author
 
 Fabian Hemmer (https://copy.sh/, `copy@copy.sh`)
+
+
+
+
+
+
+## インストール
+git clone https://github.com/copy/v86.git
+cd v86
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup target add wasm32-unknown-unknown
+sudo apt-get install clang
+curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo apt-get install default-jdk
+rustup target add wasm32-unknown-unknown
+
+make
+make all
+make run
